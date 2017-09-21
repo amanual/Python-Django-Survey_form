@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p style="color:darkolivegreen">Thanks for submitting this form you have submitted this form {{request.session.counter}} times now.</p>
+        <p>Submitted Info:</p>
+        <table action = '/result'>
+            <tr>
+            <td>Name:</td>
+            <td>{{request.session.name}}</td>
+            </tr>
+            <tr>
+            <td>Dojo Location:</td>
+            <td>{{request.session.location}}</td>
+            </tr>
+            <tr>
+               <td>Favorite Language:</td>
+               <td>{{request.session.language}}</td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td>{{request.session.comment}}</td>
+            </tr>    
+        </table>
+        <form action="surveys/process">
+            <input type="submit" value="Go Back" style="color:dodgerblue;">
+        </form>
+        <!-- <form action="/reset">
+            <input type="submit" value= 'Reset' style="color:dodgerblue;">
+        </form>  -->
+        <!-- for reset if needed -->
+</body>
+</html>
